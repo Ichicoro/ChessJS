@@ -28,10 +28,9 @@ window.onload = function init() {
             return td;
         });
     });
-
     for (var i=0; i<chessboard.length; i++) {
         for (var j=0; j < chessboard.length; j++) {
-            if (i % 2 != j % 2) {
+            if (i % 2 == j % 2) {
                 setCellColor(i, j, light);
             } else {
                 setCellColor(i, j, dark);
@@ -41,14 +40,17 @@ window.onload = function init() {
     resetBoard();
 }
 
+
 function setCellColor(y, x, color) {
     chessboard[y][x].style.backgroundColor = color;
 }
+
 
 function resetBoard() {
     clearBoard();
     resetPieces();
 }
+
 
 function clearBoard() {
     for (var i=0; i<chessboard.length; i++) {
@@ -58,16 +60,30 @@ function clearBoard() {
     }
 }
 
+
 function resetPieces() {
     setPiece(0, 0, torre_n);
     setPiece(0, 1, cavallo_n);
     setPiece(0, 2, alfiere_n);
-    setPiece(0, 3, re_n);
-    setPiece(0, 4, regina_n);
+    setPiece(0, 3, regina_n);
+    setPiece(0, 4, re_n);
     setPiece(0, 5, alfiere_n);
     setPiece(0, 6, cavallo_n);
     setPiece(0, 7, torre_n);
+    for (var i=0; i<chessboard.length; i++) {
+        setPiece(1, i, pedone_n);
+        setPiece(6, i, pedone_b);
+    }
+    setPiece(7, 0, torre_b);
+    setPiece(7, 1, cavallo_b);
+    setPiece(7, 2, alfiere_b);
+    setPiece(7, 3, regina_b);
+    setPiece(7, 4, re_b);
+    setPiece(7, 5, alfiere_b);
+    setPiece(7, 6, cavallo_b);
+    setPiece(7, 7, torre_b);
 }
+
 
 function setPiece(y, x, piece) {
     chessboard[y][x].innerHTML = piece;
