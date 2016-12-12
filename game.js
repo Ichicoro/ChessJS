@@ -18,7 +18,10 @@ function movePiece(y, x) {
     		console.log("Not a chess piece.");
     	}
     } else {
-    	if (moveAt(orig_y, orig_x, y, x)) {
+        if (orig_y == y && orig_x == x && atStep2) {
+            atStep2 = false;
+            resetCellColor();
+        }  else if (moveAt(orig_y, orig_x, y, x)) {
     		atStep2 = false;
     		resetCellColor();
     	}
@@ -37,9 +40,7 @@ function canMoveAt(orig_y, orig_x, new_y, new_x) {
 			return ((orig_y == new_y || orig_x == new_x)
 					|| (Math.abs(orig_y-orig_x) == Math.abs(new_y-new_x) || Math.abs(orig_y-new_y) == Math.abs(orig_x-new_x)));
 		case re_b: case re_n:
-			return (Math.abs(orig_x - new_x) == 1 && Math.abs(orig_y - new_y) == 1);
-			//return ((Math.abs(orig_y-new_y) == (0 || 1)) || (Math.abs(orig_x-new_x) == (0 || 1))
-			//		|| ((Math.abs(orig_y-new_x) == 1) && (Math.abs(orig_x-new_y) == 0)));
+			return (Math.abs(orig_x - new_x) <= 1 && Math.abs(orig_y - new_y) <= 1);
 	}
 }
 
