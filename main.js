@@ -43,6 +43,8 @@ function resetBoard() {
     clearBoard();
     resetPieces();
     atStep2 = false;
+    turnNumber = 0;
+    document.getElementById("bigpagetitle").innerHTML = "Chess - Player 1";
 }
 
 
