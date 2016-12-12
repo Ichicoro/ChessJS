@@ -55,8 +55,8 @@ function checkMoveset(orig_y, orig_x, new_y, new_x) {
             return (((new_y == orig_y-1) && (Math.abs(new_x - orig_x) <= 1)) || ((orig_y == 6) && (new_y == 4) && (new_x == orig_x)));
         case pedone_n:
             return (((new_y == orig_y+1) && (Math.abs(new_x - orig_x) <= 1)) || ((orig_y == 1) && (new_y == 3) && (new_x == orig_x)));
-        case cavallo_b: case cavallo_n:
-            return ();
+        //case cavallo_b: case cavallo_n:
+        //    return ();
     }
 }
 
