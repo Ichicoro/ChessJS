@@ -16,7 +16,7 @@ function movePiece(y, x) {
     		orig_y = y;
     		orig_x = x;
     	} else {
-    		console.log("Not a chess piece.");
+    		//console.log("Not a chess piece.");
     	}
     } else {
         if (orig_y == y && orig_x == x && atStep2) {  // nvm
@@ -52,9 +52,12 @@ function checkMoveset(orig_y, orig_x, new_y, new_x) {
         case re_b: case re_n:
             return (Math.abs(orig_x - new_x) <= 1 && Math.abs(orig_y - new_y) <= 1);
         case pedone_b:
-            return (((new_y == orig_y-1) && (Math.abs(new_x - orig_x) <= 1)) || ((orig_y == 6) && (new_y == 4) && (new_x == orig_x)));
+            return (((new_y == orig_y-1) && (new_x == orig_x))
+                || ((new_y == orig_y-1)&& (Math.abs(new_x - orig_x) <= 1) && (checkPlayer(new_y, new_x)))
+                || ((orig_y == 6) && (new_y == 4) && (new_x == orig_x)));
         case pedone_n:
-            return (((new_y == orig_y+1) && (Math.abs(new_x - orig_x) <= 1)) || ((orig_y == 1) && (new_y == 3) && (new_x == orig_x)));
+            return (((new_y == orig_y+1) && (Math.abs(new_x - orig_x) <= 1))
+                || ((orig_y == 1) && (new_y == 3) && (new_x == orig_x)));
         //case cavallo_b: case cavallo_n:
         //    return ();
     }
@@ -92,3 +95,58 @@ function checkPlayer(orig_y, orig_x) {
 function isPlayer2() {
     return (turnNumber % 2 != 0);
 }
+
+
+function isBlackPiece() {
+    var pieceTxt = chessboard[orig_y][orig_x].innerHTML;
+    if (pieceTxt.endsWith("_b.png\">")) {
+        return false;
+    }
+    if (pieceTxt.endsWith("_n.png\">")) {
+        return true;
+    }
+    return false;
+}
+
+
+function getPieceName(y, x) {
+    switch (chessboard[y][x].innerHTML) {
+        case torre_b: return "Torre bianca";
+        case torre_n: return "Torre nera";
+        case cavallo_b: return "Cavallo bianco";
+        case cavallo_n: return "Cavallo nero";
+        case alfiere_b: return "Alfiere bianco";
+        case alfiere_n: return "Alfiere nero";
+        case re_b: return "Re bianco";
+        case re_n: return "Re nero";
+        case regina_b: return "Regina bianca";
+        case regina_n: return "Regina nera";
+        case pedone_b : return "Pedone bianco";
+        case pedone_n: return "Pedone nero";
+    }
+}
+
+
+function getPieceID(y, x) {
+    switch (chessboard[y][x].innerHTML) {
+        case torre_b: return "Torre bianca";
+        case torre_n: return "Torre nera";
+        case cavallo_b: return "Cavallo bianco";
+        case cavallo_n: return "Cavallo nero";
+        case alfiere_b: return "Alfiere bianco";
+        case alfiere_n: return "Alfiere nero";
+        case re_b: return "Re bianco";
+        case re_n: return "Re nero";
+        case regina_b: return "Regina bianca";
+        case regina_n: return "Regina nera";
+        case pedone_b : return "Pedone bianco";
+        case pedone_n: return "Pedone nero";
+    }
+}
+
+
+/*
+    =BIANCHI=
+
+    =NERI=
+*/

@@ -30,6 +30,7 @@ window.onload = function init() {
         });
     });
     resetBoard();
+    clearConsole();
 }
 
 
@@ -45,6 +46,7 @@ function resetBoard() {
     atStep2 = false;
     turnNumber = 0;
     document.getElementById("bigpagetitle").innerHTML = "Chess - Player 1";
+    consolePrintln("Board has been reset");
 }
 
 
@@ -109,6 +111,7 @@ function moveAt(orig_y, orig_x, new_y, new_x) {
         oghtml = chessboard[orig_y][orig_x].innerHTML;
         killPiece(orig_y, orig_x);
         setPiece(new_y, new_x, oghtml);
+        consolePrintln("Moved " + orig_y + "," + orig_x + " to " + new_y + "," + new_x);
         return true;
     } else {
         console.log("Invalid move");
