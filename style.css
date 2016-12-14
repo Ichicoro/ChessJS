@@ -2,3 +2,13 @@
     border-color: rgba(0,0,0,1);
     border-spacing: 0px;
 }
+
+#taConsole {
+	min-width: 524px;
+	min-height: 100px;
+	visibility: hidden;
+}
+
+h1 {
+	margin: 10px;
+}

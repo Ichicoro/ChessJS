@@ -123,24 +123,38 @@ function getPieceName(y, x) {
         case regina_n: return "Regina nera";
         case pedone_b : return "Pedone bianco";
         case pedone_n: return "Pedone nero";
+        case img_vuota: return "Casella vuota";
+        default: return "null";
     }
 }
 
 
+/*
+PEZZI
+1 bianco  -  2 nero  -  0 vuota
+0 torre
+1 cavallo
+2 alfiere
+3 re
+4 regina
+5 pedone
+*/
+
 function getPieceID(y, x) {
     switch (chessboard[y][x].innerHTML) {
-        case torre_b: return "Torre bianca";
-        case torre_n: return "Torre nera";
-        case cavallo_b: return "Cavallo bianco";
-        case cavallo_n: return "Cavallo nero";
-        case alfiere_b: return "Alfiere bianco";
-        case alfiere_n: return "Alfiere nero";
-        case re_b: return "Re bianco";
-        case re_n: return "Re nero";
-        case regina_b: return "Regina bianca";
-        case regina_n: return "Regina nera";
-        case pedone_b : return "Pedone bianco";
-        case pedone_n: return "Pedone nero";
+        case img_vuota: return 00;
+        case torre_b: return 10;
+        case torre_n: return 20;
+        case cavallo_b: return 11;
+        case cavallo_n: return 21;
+        case alfiere_b: return 12;
+        case alfiere_n: return 22;
+        case re_b: return 13;
+        case re_n: return 23;
+        case regina_b: return 14;
+        case regina_n: return 24;
+        case pedone_b : return 15;
+        case pedone_n: return 25;
     }
 }
 

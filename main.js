@@ -111,12 +111,18 @@ function moveAt(orig_y, orig_x, new_y, new_x) {
         oghtml = chessboard[orig_y][orig_x].innerHTML;
         killPiece(orig_y, orig_x);
         setPiece(new_y, new_x, oghtml);
-        consolePrintln("Moved " + orig_y + "," + orig_x + " to " + new_y + "," + new_x);
+        consolePrintln("Moved " + orig_y + "," + orig_x + "(" + getPieceName(new_y, new_x) + ") to " + new_y + "," + new_x);
         return true;
     } else {
         console.log("Invalid move");
         return false;
     }
+}
+
+
+function rcHandler(y, x, evt) {
+    evt.preventDefault();
+    consolePrintln(y + ";" + x);
 }
 
 
