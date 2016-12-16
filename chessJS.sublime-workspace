@@ -1,0 +1,832 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"console",
+				"consolePrintln"
+			],
+			[
+				"get",
+				"getElementsByClass"
+			],
+			[
+				"on",
+				"onmouseover\tAttr"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"qty",
+				"qtyToLoad"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"to",
+				"toTextDay"
+			],
+			[
+				"in",
+				"innerHTML"
+			],
+			[
+				"input",
+				"inputTxtArea"
+			],
+			[
+				"do",
+				"doScrTitle"
+			],
+			[
+				"ng",
+				"ng-model\tAngularJS"
+			],
+			[
+				"curre",
+				"currentplusnextX"
+			],
+			[
+				"current",
+				"currentplusnextY"
+			],
+			[
+				"curr",
+				"currentPos"
+			],
+			[
+				"c",
+				"currentY"
+			],
+			[
+				"sele",
+				"selectedIndex"
+			],
+			[
+				"opt",
+				"option\tTag"
+			],
+			[
+				"vowe",
+				"vowel_a"
+			],
+			[
+				"va",
+				"valoreInserito"
+			],
+			[
+				"p",
+				"println"
+			],
+			[
+				"fizz",
+				"fizzbuzz"
+			],
+			[
+				"about",
+				"aboutsection"
+			],
+			[
+				"list-styl",
+				"list-style-type"
+			],
+			[
+				"tbo",
+				"tBoxB"
+			],
+			[
+				"i",
+				"input\tTag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 6498,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "main.js",
+			"settings":
+			{
+				"buffer_size": 3418,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "game.js",
+			"settings":
+			{
+				"buffer_size": 4668,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sound.js",
+			"settings":
+			{
+				"buffer_size": 186,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "utils.js",
+			"settings":
+			{
+				"buffer_size": 840,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "genTable.java",
+			"settings":
+			{
+				"buffer_size": 517,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "style.css",
+			"settings":
+			{
+				"buffer_size": 213,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "prefere",
+		"selected_items":
+		[
+			[
+				"prefere",
+				"Preferences: Settings"
+			],
+			[
+				"utf",
+				"Snippet: utf8_charset"
+			],
+			[
+				"html",
+				"Snippet: html"
+			],
+			[
+				"sni",
+				"Snippet: html"
+			],
+			[
+				"snippet",
+				"Snippet: utf8_charset"
+			],
+			[
+				"snip",
+				"Snippet: html"
+			],
+			[
+				"htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"markd",
+				"Set Syntax: Markdown"
+			],
+			[
+				"markdown",
+				"Set Syntax: Markdown"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"install package",
+				"Package Control: Install Package"
+			],
+			[
+				"ut",
+				"Snippet: utf8_charset"
+			],
+			[
+				"s",
+				"Snippet: html"
+			],
+			[
+				"ss",
+				"Set Syntax: HTML"
+			],
+			[
+				"snipe",
+				"Snippet: |uppercase"
+			],
+			[
+				"sshtml",
+				"Set Syntax: HTML"
+			],
+			[
+				"",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"pref",
+				"Preferences: Settings"
+			],
+			[
+				"insatll",
+				"Package Control: Install Package"
+			],
+			[
+				"material",
+				"Material Theme: Configuration"
+			],
+			[
+				"coor",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"color",
+				"Colorsublime: Browse Themes"
+			],
+			[
+				"sshtm",
+				"Set Syntax: HTML"
+			],
+			[
+				"markdo",
+				"Set Syntax: Markdown"
+			],
+			[
+				"lorem",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"sshtt",
+				"Set Syntax: HTML"
+			],
+			[
+				"snipp",
+				"Snippet: |filter"
+			],
+			[
+				"package contro",
+				"Package Control: Disable Package"
+			],
+			[
+				"snippet angular",
+				"Snippet: Angular Material - The circular progress directive is used to make loading content in your app as delightful and painless as possible by minimizing the amount of visual change a user sees before they can view and interact with content."
+			],
+			[
+				"ssang",
+				"Set Syntax: HTML (Angular.js)"
+			],
+			[
+				"insat",
+				"Package Control: Install Package"
+			],
+			[
+				"snu",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"ssht",
+				"Set Syntax: HTML"
+			],
+			[
+				"ssh",
+				"Set Syntax: HTML"
+			],
+			[
+				"pascal",
+				"Set Syntax: Free Pascal"
+			],
+			[
+				"sspas",
+				"Set Syntax: Pascal"
+			],
+			[
+				"ssc",
+				"Set Syntax: C++"
+			],
+			[
+				"sspa",
+				"Set Syntax: Pascal"
+			],
+			[
+				"ssahk",
+				"Set Syntax: AutoHotkey"
+			],
+			[
+				"snh",
+				"Snippet: html"
+			],
+			[
+				"sniphtml",
+				"Snippet: html"
+			],
+			[
+				"set syntax html",
+				"Set Syntax: HTML"
+			],
+			[
+				"html ",
+				"Snippet: html"
+			],
+			[
+				"preference",
+				"Preferences: Key Bindings"
+			],
+			[
+				"set syntax javascr",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"keyb",
+				"Preferences: Key Bindings"
+			],
+			[
+				"Snippet: ",
+				"Snippet: html"
+			]
+		],
+		"width": 454.0
+	},
+	"console":
+	{
+		"height": 176.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/smart/Documents/Projects/ChessJS",
+		"/C/Users/smart/Documents/Projects/ChessJS/assets"
+	],
+	"file_history":
+	[
+		"/C/Users/smart/Documents/Projects/ChessJS/game.js",
+		"/C/Users/smart/Documents/Projects/ChessJS/aiut",
+		"/C/Users/smart/Documents/Projects/ChessJS/halp.txt",
+		"/C/Users/smart/Downloads/Telegram Desktop/genTable.java",
+		"/E/HxD/HxD.ini",
+		"/C/Users/smart/Desktop/cic_js1_montipo/slideShow/slideShow.html",
+		"/C/Users/smart/Documents/start updates.bat",
+		"/C/Users/smart/Documents/stop updates.bat",
+		"/C/Users/smart/Documents/Scuola/Tepsit/orario.html",
+		"/C/Users/smart/Documents/Scuola/Tepsit/cronometro.html",
+		"/C/Users/smart/Desktop/cic_js1_montipo/saluto/saluto.html",
+		"/C/Users/smart/Documents/Scuola/English/manor_room.md",
+		"/C/Users/smart/Documents/Scuola/Tepsit/date.html",
+		"/C/Users/smart/Desktop/hitmarker.html",
+		"/E/2016-2017/Esempi_18_ottobre/Esempio03_array_images/document.html",
+		"/E/Sol_5_4_Banner.html",
+		"/C/Users/smart/Documents/Scuola/Tepsit/desktop/orig_copione.html",
+		"/C/Users/smart/AppData/Roaming/Sublime Text 3/Packages/User/HTML/utf8_charset.sublime-snippet",
+		"/C/Users/smart/Documents/Scuola/Tepsit/form_js.html",
+		"/C/Users/smart/Downloads/Autodesk AutoCAD 2017 (x64) + Keygen [SadeemPC]/Crack/install.txt",
+		"/C/Users/smart/Desktop/ciaone.html",
+		"/C/Users/smart/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/smart/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/smart/Documents/AngularJS/index.html",
+		"/C/Users/smart/Desktop/Password.txt",
+		"/Z/4M13/tepsit/es_vacanze_form/index.html",
+		"/C/Users/smart/Documents/Olimpiadi/lava/exec.bat",
+		"/C/Users/smart/Documents/Olimpiadi/lava/build.bat",
+		"/C/Users/smart/Documents/Olimpiadi/lava/exec",
+		"/C/Users/smart/Documents/Olimpiadi/lava/start.bat",
+		"/C/Users/smart/Desktop/olimpiadi/lava/lava.pas",
+		"/C/Users/smart/Desktop/olimpiadi/lava/input.txt",
+		"/D/input.txt",
+		"/C/Users/smart/Desktop/olimpiadi/lava/output.txt",
+		"/D/Olimpuz/seats (it).pdf",
+		"/C/ahkScripts/menuStuff.ahk",
+		"/C/Users/smart/Desktop/10_muovi_pacman.html",
+		"/C/Users/smart/Documents/NetBeansProjects/EsamiMaturita/src/esamimaturita/EsamiMaturita.java",
+		"/C/Users/smart/Desktop/Esercizi/letterextraction.js",
+		"/C/Users/smart/Desktop/mof.html",
+		"/C/Users/smart/Desktop/googlelogo.html",
+		"/C/Users/smart/Desktop/Esercizi/Estrazione lettere.html",
+		"/C/Users/smart/Documents/Scuola/Tepsit/giochino html/index.html",
+		"/C/Users/smart/Documents/Scuola/Tepsit/giochino html/gioco.html",
+		"/C/Users/smart/Documents/Scuola/Tepsit/array.html",
+		"/C/Users/smart/Documents/Scuola/Tepsit/es_fine_capitolo_forms.html",
+		"/C/Users/smart/Documents/Scuola/Tepsit/lista.html",
+		"/C/Users/smart/Documents/Scuola/Tepsit/form_sistemi.html",
+		"/C/Users/smart/Documents/Scuola/Tepsit/Sol_2_2_tabellina.html",
+		"/C/Users/smart/Desktop/showQty.html",
+		"/C/Users/smart/Documents/ichicoro.github.io/style.css",
+		"/C/Users/smart/Documents/ichicoro.github.io/index.html",
+		"/C/Users/smart/Documents/NetBeansProjects/Fattoriali/src/fattoriali/Fattoriali.java",
+		"/C/Users/smart/Desktop/orderedArray.html",
+		"/C/Users/smart/Desktop/AggiungiElemento.html",
+		"/C/Users/smart/Desktop/AggiungiElemento2Bottoni.html",
+		"/C/Users/smart/Desktop/lista.html",
+		"/Z/tepsit/tavolapitagorica.html",
+		"/Z/java/compiti 10-10-16/Es2.java",
+		"/C/Program Files/MacType/MacType.ini",
+		"/C/Users/smart/Downloads/AggiungiElemento.html",
+		"/Z/java/compiti 10-10-16/Es3.java",
+		"/Z/java/compiti 10-10-16/Es1.java",
+		"/C/Users/smart/Documents/Scuola/Informatica/Stringhe.java",
+		"/C/Users/smart/Documents/Java8086/main.java",
+		"/Z/tepsit/calcolatrice.html",
+		"/Z/tepsit/lista",
+		"/C/Users/smart/Desktop/Main.java",
+		"/C/Users/smart/Desktop/array.html",
+		"/D/es_3_mat.pas",
+		"/D/es_4_matrici.pas",
+		"/C/Users/smart/Documents/ichicoro.github.io/scripts/smoothscroll.js",
+		"/D/nonnobit/index.html",
+		"/Z/tepsit/fizzbuzz.html",
+		"/D/nonnobit/scripts/headerchange.js",
+		"/C/Users/smart/Documents/Java8086/Intel8086.java",
+		"/Z/tepsit/calcolatrice.js",
+		"/Y/tepsit/javascript/05_alert_prompt_confirm.html",
+		"/C/Users/smart/Documents/Java8086/README.md",
+		"/C/Users/smart/Documents/tepsit/javascript_inizio.html",
+		"/C/Users/smart/Desktop/form_sistemi.html",
+		"/C/Users/smart/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/smart/Desktop/form_sistemi",
+		"/C/Users/smart/AppData/Roaming/Sublime Text 3/Packages/User/Pascal.sublime-settings"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"span",
+			"numeroWordsInserite",
+			"valoreInserito",
+			"divRisultato",
+			"appoggio",
+			"aggiungi",
+			"parole",
+			"ElencoOrdinato"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"img",
+			"nOfWords",
+			"inputValue",
+			"resultDiv",
+			"box",
+			"addToList",
+			"words",
+			"orderedList"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "C:\\Users\\smart\\Documents\\Projects\\ChessJS"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6498,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5120,
+								5121
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1079.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3418,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								174,
+								183
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "game.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4668,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								486,
+								486
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2240.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sound.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 186,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								186,
+								186
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "utils.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 840,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								551,
+								549
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "genTable.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 517,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								353,
+								353
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 213,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								187,
+								187
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 63.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 199.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

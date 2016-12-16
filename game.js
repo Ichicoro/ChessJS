@@ -27,6 +27,7 @@ function movePiece(y, x) {
     		resetCellColor();
             turnNumber += 1;
             document.getElementById("bigpagetitle").innerHTML = "Chess - Player " + Math.abs((turnNumber % 2)+1);
+            playMovementSound();
     	}
     }
 }
@@ -111,19 +112,19 @@ function isBlackPiece() {
 
 function getPieceName(y, x) {
     switch (chessboard[y][x].innerHTML) {
-        case torre_b: return "Torre bianca";
-        case torre_n: return "Torre nera";
-        case cavallo_b: return "Cavallo bianco";
-        case cavallo_n: return "Cavallo nero";
-        case alfiere_b: return "Alfiere bianco";
-        case alfiere_n: return "Alfiere nero";
-        case re_b: return "Re bianco";
-        case re_n: return "Re nero";
-        case regina_b: return "Regina bianca";
-        case regina_n: return "Regina nera";
-        case pedone_b : return "Pedone bianco";
-        case pedone_n: return "Pedone nero";
-        case img_vuota: return "Casella vuota";
+        case torre_b: return "White tower";
+        case torre_n: return "Black tower";
+        case cavallo_b: return "White horse";
+        case cavallo_n: return "Black horse";
+        case alfiere_b: return "White bishop";
+        case alfiere_n: return "Black bishop";
+        case re_b: return "White king";
+        case re_n: return "Black king";
+        case regina_b: return "White queen";
+        case regina_n: return "Black queen";
+        case pedone_b: return "White pawn";
+        case pedone_n: return "Black pawn";
+        case img_vuota: return "Empty square";
         default: return "null";
     }
 }
@@ -157,10 +158,3 @@ function getPieceID(y, x) {
         case pedone_n: return 25;
     }
 }
-
-
-/*
-    =BIANCHI=
-
-    =NERI=
-*/

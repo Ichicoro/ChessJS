@@ -9,6 +9,10 @@
 	visibility: hidden;
 }
 
+#logBtn {
+	visibility: hidden;
+}
+
 h1 {
 	margin: 10px;
 }

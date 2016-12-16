@@ -121,8 +121,9 @@ function moveAt(orig_y, orig_x, new_y, new_x) {
 
 
 function rcHandler(y, x, evt) {
+    consolePrintln(y + ";" + x + " (" + getPieceName(y, x) + ")");
+    playRCSound(y, x);
     evt.preventDefault();
-    consolePrintln(y + ";" + x);
 }
 
 
