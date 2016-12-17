@@ -13,11 +13,13 @@ var pedone_b  = "<img src=\"assets/images/pedone_b.png\">";
 var pedone_n  = "<img src=\"assets/images/pedone_n.png\">";
 var re_b      = "<img src=\"assets/images/re_b.png\">";
 var re_n      = "<img src=\"assets/images/re_n.png\">";
-var regina_b  = "<img src=\"assets/images/regina_b.png\">"
+var regina_b  = "<img src=\"assets/images/regina_b.png\">";
 var regina_n  = "<img src=\"assets/images/regina_n.png\">";
 var torre_b   = "<img src=\"assets/images/torre_b.png\">";
 var torre_n   = "<img src=\"assets/images/torre_n.png\">";
 
+var number_timer;
+var orig_number = -1;
 
 
 
@@ -31,6 +33,7 @@ window.onload = function init() {
     });
     resetBoard();
     clearConsole();
+    assignShortcuts();
 }
 
 
@@ -127,3 +130,13 @@ function rcHandler(y, x, evt) {
 }
 
 
+function numberHandler(x) {
+    if (orig_number == -1) {
+        number_timer = setTimeout(function(){ orig_number = -1; }, 2000);
+        orig_number = x;
+    } else {
+        number_timer = undefined;
+        movePiece(orig_number, x);
+        orig_number = -1;
+    }
+}

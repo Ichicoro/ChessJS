@@ -5,7 +5,7 @@ public class genTable {
         for (int i=0;i<8;i++) {
             str += "        <tr>\n";
             for (int j=0; j<8; j++) {
-                str += "            <td onclick=\"movePiece(" + i + "," + j + ")\" oncontextmenu=\"rcHandler(" + i + ", " + j + ", event)\"></td>\n";
+                str += "            <th onclick=\"movePiece(" + i + "," + j + ")\" oncontextmenu=\"rcHandler(" + i + ", " + j + ", event)\"></th>\n";
             }
             str += "        </tr>\n";
         }

@@ -15,6 +15,7 @@ function movePiece(y, x) {
     		setCellColor(y, x, red_square);
     		orig_y = y;
     		orig_x = x;
+            showPossibleMoves(orig_y, orig_x);
     	} else {
     		//console.log("Not a chess piece.");
     	}
@@ -98,7 +99,7 @@ function isPlayer2() {
 }
 
 
-function isBlackPiece() {
+function isBlackPiece(orig_y, orig_x) {
     var pieceTxt = chessboard[orig_y][orig_x].innerHTML;
     if (pieceTxt.endsWith("_b.png\">")) {
         return false;
@@ -107,6 +108,18 @@ function isBlackPiece() {
         return true;
     }
     return false;
+}
+
+
+function showPossibleMoves(y, x) {
+    for (var i=0; i<chessboard.length; i++) {
+        for (var j=0; j<chessboard.length; j++) {
+            if (checkMoveset(y, x, i, j) && checkNextPiece(y, x, i, j)) {
+                setCellColor(i, j, "#32cd32");
+                console.log(i + "," + j);
+            }
+        }
+    }
 }
 
 

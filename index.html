@@ -3,6 +3,7 @@
 <head>
     <title>Chess</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="rainboweffect.css">
     <meta charset="utf-8">
 </head>
 <body>
@@ -100,11 +101,20 @@
 <textarea id="taConsole" readonly></textarea><br/>
 <button onclick="switchLogging()" id="logBtn">Clear log</button>
 
+<div id="helpBox">
+    <h2>Help</h2>
+    <p>Press F1 to toggle this help box<br/>
+    Press Ctrl+R to reset the chessboard<br/>
+    Press Ctrl+L to toggle logging
+    Press Alt+D to enable developer mode</p>
+</div>
+
 </body>
 
 <script type="text/javascript" src="main.js"></script>
 <script type="text/javascript" src="game.js"></script>
 <script type="text/javascript" src="utils.js"></script>
 <script type="text/javascript" src="sound.js"></script>
+<script type="text/javascript" src="shortcut.js"></script>
 
 </html>
