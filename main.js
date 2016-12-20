@@ -20,7 +20,7 @@ var torre_n   = "<img src=\"assets/images/torre_n.png\">";
 
 var number_timer;
 var orig_number = -1;
-
+var startup = true;
 
 
 
@@ -43,13 +43,27 @@ function setCellColor(y, x, color) {
 
 
 function resetBoard() {
-    resetCellColor();
-    clearBoard();
-    resetPieces();
-    atStep2 = false;
-    turnNumber = 0;
-    document.getElementById("bigpagetitle").innerHTML = "Chess - Player 1";
-    consolePrintln("Board has been reset");
+    if (!startup) {
+        var conf = confirm("Do you really want to reset?");
+    } else {
+        resetCellColor();
+        clearBoard();
+        resetPieces();
+        atStep2 = false;
+        turnNumber = 0;
+        document.getElementById("bigpagetitle").innerHTML = "Chess - Player 1";
+        startup = false;
+    }
+    if (conf) {
+        resetCellColor();
+        clearBoard();
+        resetPieces();
+        atStep2 = false;
+        turnNumber = 0;
+        document.getElementById("bigpagetitle").innerHTML = "Chess - Player 1";
+        consolePrintln("Board has been reset");
+    }
+    
 }
 
 

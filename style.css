@@ -1,6 +1,11 @@
 #chessboard_table {
     border-color: rgba(0,0,0,1);
     border-spacing: 0px;
+    border: 1px solid rgba(20,20,20,0.35);
+}
+
+td {
+    border: 1px solid rgba(20,20,20,0.35);
 }
 
 #taConsole {
@@ -29,4 +34,13 @@
 
 h1 {
 	margin: 10px;
+}
+
+body {
+    text-align: center;
+}
+
+#chessboard_table {
+    text-align: center;
+    margin: 0 auto;
 }

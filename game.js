@@ -44,26 +44,65 @@ function canMoveAt(orig_y, orig_x, new_y, new_x) {
 function checkMoveset(orig_y, orig_x, new_y, new_x) {
     switch (chessboard[orig_y][orig_x].innerHTML) {
         case torre_b: case torre_n:
-            return (orig_y == new_y || orig_x == new_x);
+            return checkTower(orig_y, orig_x, new_y, new_x);
         case alfiere_b: case alfiere_n:
-            return (Math.abs(orig_y-orig_x) == Math.abs(new_y-new_x)
-                    || Math.abs(orig_y-new_y) == Math.abs(orig_x-new_x));
+            return checkBishop(orig_y, orig_x, new_y, new_x);
         case regina_b: case regina_n:
-            return ((orig_y == new_y || orig_x == new_x)
-                    || (Math.abs(orig_y-orig_x) == Math.abs(new_y-new_x) || Math.abs(orig_y-new_y) == Math.abs(orig_x-new_x)));
+            return checkQueen(orig_y, orig_x, new_y, new_x);
         case re_b: case re_n:
-            return (Math.abs(orig_x - new_x) <= 1 && Math.abs(orig_y - new_y) <= 1);
+            return checkKing(orig_y, orig_x, new_y, new_x);
         case pedone_b:
-            return (((new_y == orig_y-1) && (new_x == orig_x))
-                || ((new_y == orig_y-1)&& (Math.abs(new_x - orig_x) <= 1) && (checkPlayer(new_y, new_x)))
-                || ((orig_y == 6) && (new_y == 4) && (new_x == orig_x)));
+            return checkWhitePawn(orig_y, orig_x, new_y, new_x)
         case pedone_n:
-            return (((new_y == orig_y+1) && (Math.abs(new_x - orig_x) <= 1))
-                || ((orig_y == 1) && (new_y == 3) && (new_x == orig_x)));
-        //case cavallo_b: case cavallo_n:
-        //    return ();
+            return checkBlackPawn(orig_y, orig_x, new_y, new_x);
+        case cavallo_b: case cavallo_n:
+            return checkHorse(orig_y, orig_x, new_y, new_x);
     }
 }
+
+
+function checkTower(orig_y, orig_x, new_y, new_x) {
+    return (orig_y == new_y || orig_x == new_x);
+}
+
+
+function checkBishop(orig_y, orig_x, new_y, new_x) {
+    return (Math.abs(orig_y-orig_x) == Math.abs(new_y-new_x)
+                    && Math.abs(orig_y-new_y) == Math.abs(orig_x-new_x));
+}
+
+
+function checkQueen(orig_y, orig_x, new_y, new_x) {
+    return ((orig_y == new_y || orig_x == new_x)
+                    || (Math.abs(orig_y-orig_x) == Math.abs(new_y-new_x) || Math.abs(orig_y-new_y) == Math.abs(orig_x-new_x)));
+}
+
+
+function checkKing(orig_y, orig_x, new_y, new_x) {
+    return (Math.abs(orig_x - new_x) <= 1 && Math.abs(orig_y - new_y) <= 1);
+}
+
+
+function checkWhitePawn(orig_y, orig_x, new_y, new_x) {
+    return (((new_y == orig_y-1) && (new_x == orig_x))
+                || ((new_y == orig_y-1)&& (Math.abs(new_x - orig_x) <= 1) && (checkPlayer(new_y, new_x)))
+                || ((orig_y == 6) && (new_y == 4) && (new_x == orig_x)));
+}
+
+
+function checkBlackPawn(orig_y, orig_x, new_y, new_x) {
+    return (((new_y == orig_y+1) && (Math.abs(new_x - orig_x) <= 1))
+                || ((orig_y == 1) && (new_y == 3) && (new_x == orig_x)));
+}
+
+
+function checkHorse(orig_y, orig_x, new_y, new_x) {
+    var abs_y = Math.abs(orig_y-new_y);
+    var abs_x = Math.abs(orig_x-new_x);
+    return ((abs_y > 0 && abs_y <= 2) && (abs_x > 0 && abs_x <= 2) && (abs_x != abs_y));
+}
+
+
 
 
 function checkNextPiece(orig_y, orig_x, new_y, new_x) {
@@ -111,11 +150,26 @@ function isBlackPiece(orig_y, orig_x) {
 }
 
 
+function isWhitePiece(orig_y, orig_x) {
+    var pieceTxt = chessboard[orig_y][orig_x].innerHTML;
+    if (pieceTxt.endsWith("_b.png\">")) {
+        return true;
+    }
+    if (pieceTxt.endsWith("_n.png\">")) {
+        return false;
+    }
+    return false;
+}
+
+
 function showPossibleMoves(y, x) {
     for (var i=0; i<chessboard.length; i++) {
         for (var j=0; j<chessboard.length; j++) {
             if (checkMoveset(y, x, i, j) && checkNextPiece(y, x, i, j)) {
                 setCellColor(i, j, "#32cd32");
+                if ((isBlackPiece(i,j) && !isPlayer2()) || (isWhitePiece(i,j) && isPlayer2())) {
+                    setCellColor(i, j, "#8032cd");
+                }
                 console.log(i + "," + j);
             }
         }

@@ -26,6 +26,10 @@ function assignShortcuts() {
         toggleRainbow();
     });
 
+    shortcut.add("Ctrl+Alt+D",function() {
+        //();
+    });
+
 
     shortcut.add("1",function() {
         numberHandler(0);
@@ -88,7 +92,6 @@ function switchLogging() {
         taConsole.style.visibility = "visible";
         logBtn.style.visibility = "visible";
         console.log("Logging enabled ("+ log_enabled +")");
-        //log_timer = setInterval();
     } else {
         log_enabled = false;
         taConsole.style.visibility = "hidden";
