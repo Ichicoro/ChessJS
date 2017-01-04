@@ -10,32 +10,32 @@ function movePiece(y, x) {
     console.log("Clicked at " + y + "," + x);
     console.log("Is a piece: " + chessboard[y][x].innerHTML != img_vuota);
     if (!atStep2) {
-    	if ((chessboard[y][x].innerHTML != img_vuota) && checkPlayer(y,x)) {
-    		atStep2 = true;
-    		setCellColor(y, x, red_square);
-    		orig_y = y;
-    		orig_x = x;
+        if ((chessboard[y][x].innerHTML != img_vuota) && checkPlayer(y,x)) {
+            atStep2 = true;
+            setCellColor(y, x, red_square);
+            orig_y = y;
+            orig_x = x;
             showPossibleMoves(orig_y, orig_x);
-    	} else {
-    		//console.log("Not a chess piece.");
-    	}
+        } else {
+            //console.log("Not a chess piece.");
+        }
     } else {
         if (orig_y == y && orig_x == x && atStep2) {  // nvm
             atStep2 = false;
             resetCellColor();
         } else if (moveAt(orig_y, orig_x, y, x)) {    // let's do this
-    		atStep2 = false;
-    		resetCellColor();
+            atStep2 = false;
+            resetCellColor();
             turnNumber += 1;
             document.getElementById("bigpagetitle").innerHTML = "Chess - Player " + Math.abs((turnNumber % 2)+1);
             playMovementSound();
-    	}
+        }
     }
 }
 
 
 function canMoveAt(orig_y, orig_x, new_y, new_x) {
-	return (checkMoveset(orig_y, orig_x, new_y, new_x) &&
+    return (checkMoveset(orig_y, orig_x, new_y, new_x) &&
     checkNextPiece(orig_y, orig_x, new_y, new_x) &&
     checkPlayer(orig_y, orig_x) && isPathClear(orig_y, orig_x, new_y, new_x));
 }
@@ -59,13 +59,15 @@ function isPathClear(orig_y, orig_x, new_y, new_x) {
     switch (chessboard[orig_y][orig_x].innerHTML) {
         case torre_b: case torre_n:
             return checkTowerPath(orig_y, orig_x, new_y, new_x);
+        case alfiere_b: case alfiere_n:
+            return checkBishopPath(orig_y, orig_x, new_y, new_x);
         default: return true;
     }
     return true;
 }
 
 
-function checkTowerPath(orig_y, orig_x, new_y, new_x) {
+function checkTowerPath(orig_x, orig_y, new_x, new_y) {
     var x_increment, y_increment;
 
     // Vede se new_x è a destra (+1), a sinistra (-1), o sulla stessa X di orig_x
@@ -85,14 +87,13 @@ function checkTowerPath(orig_y, orig_x, new_y, new_x) {
         y_increment = +1;
 
     // Tiene traccia della cella attuale, iniziando da old...
-    var current_x = orig_x;
-    var current_y = orig_y;
+    var current_x = orig_x + x_increment;
+    var current_y = orig_y + y_increment;
 
     // ... e finendo in new
-    while (current_x != new_x || orig_y != new_y) {
+    while (current_x != new_x || current_y != new_y) {
         if (chessboard[current_x][current_y].innerHTML != img_vuota) return false;
         // Spostandosi secondo gli incrementi calcolati prima
-        console.log(current_y + ":" + current_x);
         current_x += x_increment;
         current_y += y_increment;
     }
@@ -101,48 +102,32 @@ function checkTowerPath(orig_y, orig_x, new_y, new_x) {
 
 }
 
-/*
-function checkTowerPath(orig_y, orig_x, new_y, new_x) {
-    var check = true;
-    if (new_y == orig_y) {
-        if (orig_x > new_x) {
-            for (var i=orig_x;i>=new_x; i--) {
-                if (chessboard[orig_y][i].innerHTML != img_vuota) {
-                    return false;
-                    break;
-                }
-            }
-        }
-        else { //if (orig_x < new_x)
-            for (var i=orig_x;i<=new_x; i++) {
-                if (chessboard[orig_y][i].innerHTML != img_vuota) {
-                    return false;
-                    break;
-                }
-            }
-        }
+
+function checkBishopPath(orig_y, orig_x, new_y, new_x) {
+    var x_increment, y_increment;
+    if (new_y > orig_y) {
+        y_increment = 1;
+    } else {
+        y_increment = -1;
     }
-    else if (new_x == orig_x) {
-        if (orig_y > new_y) {
-            for (var i=orig_y;i>=new_y; i--) {
-                if (chessboard[i][orig_x].innerHTML != img_vuota) {
-                    return false;
-                    break;
-                }
-            }
-        }
-        else { //if (orig_y < new_y)
-            for (var i=orig_y;i<=new_y; i++) {
-                if (chessboard[i][orig_x].innerHTML != img_vuota) {
-                    return false;
-                    break;
-                }
-            }
-        }
+
+    if (new_x > orig_x) {
+        x_increment = 1;
+    } else {
+        x_increment = -1;
     }
-    return check;
+
+    var current_x = orig_x + x_increment;
+    var current_y = orig_y + y_increment;
+
+    while (current_x != new_x && current_y != new_y) {
+        if (chessboard[current_x][current_y].innerHTML != img_vuota) return false;
+        current_x += x_increment;
+        current_y += y_increment;
+    }
 }
-*/
+
+
 
 
 
