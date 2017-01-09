@@ -61,6 +61,8 @@ function isPathClear(orig_y, orig_x, new_y, new_x) {
             return checkTowerPath(orig_y, orig_x, new_y, new_x);
         case alfiere_b: case alfiere_n:
             return checkBishopPath(orig_y, orig_x, new_y, new_x);
+        case regina_b: case regina_n:
+            return checkTowerPath(orig_y, orig_x, new_y, new_x) || checkBishopPath(orig_y, orig_x, new_y, new_x);
         default: return true;
     }
     return true;
@@ -121,10 +123,12 @@ function checkBishopPath(orig_y, orig_x, new_y, new_x) {
     var current_y = orig_y + y_increment;
 
     while (current_x != new_x && current_y != new_y) {
-        if (chessboard[current_x][current_y].innerHTML != img_vuota) return false;
+        if (chessboard[current_y][current_x].innerHTML != img_vuota) return false;
         current_x += x_increment;
         current_y += y_increment;
     }
+
+    return true;
 }
 
 
@@ -315,5 +319,15 @@ function getPieceID(y, x) {
         case regina_n: return 24;
         case pedone_b : return 15;
         case pedone_n: return 25;
+    }
+}
+
+
+function isChecking(y, x) {
+    var checkmate = false;
+    if (playerNum = 0) {
+        var colorOfEnemy = "_n.png\">";
+    } else {
+        var colorOfEnemy = "_b.png\">";
     }
 }
