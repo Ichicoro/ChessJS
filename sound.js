@@ -1,9 +1,9 @@
 var alfiere_suono 		  = new Audio("assets/sounds/alfiere_suono.wav");
 var cavallo_suono 		  = new Audio("assets/sounds/cavallo_suono.mp3");
 var re_suono              = new Audio("assets/sounds/alfiere_suono.wav");
-var regina_suono          = new Audio("assets/sounds/alfiere_suono.wav");
-var torre_suono           = new Audio("assets/sounds/alfiere_suono.wav");
-var pedone_suono          = new Audio("assets/sounds/alfiere_suono.wav");
+var regina_suono          = new Audio("assets/sounds/regina_suono.mp3");
+var torre_suono           = new Audio("assets/sounds/torre_suono.wav");
+var pedone_suono          = new Audio("assets/sounds/pedone_suono.mp3");
 var movimento_pezzo_suono = new Audio("assets/sounds/movimento_pezzo_suono.wav");
 
 function playRCSound(y, x) { 

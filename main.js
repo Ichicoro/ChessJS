@@ -51,7 +51,7 @@ function resetBoard() {
         resetPieces();
         atStep2 = false;
         turnNumber = 0;
-        document.getElementById("bigpagetitle").innerHTML = "Chess - Player 1";
+        document.getElementById("bigpagetitle").innerHTML = "Chess - Player 1 (White)";
         startup = false;
     }
     if (conf) {

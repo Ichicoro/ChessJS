@@ -27,7 +27,13 @@ function movePiece(y, x) {
             atStep2 = false;
             resetCellColor();
             turnNumber += 1;
-            document.getElementById("bigpagetitle").innerHTML = "Chess - Player " + Math.abs((turnNumber % 2)+1);
+            var playerNumber = Math.abs((turnNumber % 2)+1);
+            if (playerNumber == 1) {
+                var playerColor = "(White)";
+            } else {
+                var playerColor = "(Black)";
+            }
+            document.getElementById("bigpagetitle").innerHTML = "Chess - Player " + playerNumber + " " + playerColor;
             playMovementSound();
         }
     }
